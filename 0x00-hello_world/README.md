@@ -1,1 +1,1 @@
-My low level programming journey as an ALX Student
+script that runs a C file through the preprocessor and result into another file
