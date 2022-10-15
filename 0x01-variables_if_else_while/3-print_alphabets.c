@@ -7,9 +7,13 @@ int main(void)
 {
 	char lca, uca;
 
-	for ((lca = 'a'; lca <= 'z'; lca++) && (uca = 'A'; uca <= 'Z'; uca++))
+	for (lca = 'a'; lca <= 'z'; lca++)
 	{
 		putchar(lca);
+	}
+
+	for (uca = 'A'; uca <= 'Z'; uca++)
+	{
 		putchar(uca);
 	}
 
