@@ -17,7 +17,7 @@ int main(void)
 
 	for (lc = 'a'; lc <= 'f'; lc++)
 	{
-		putchar(lc)
+		putchar(lci);
 	}
 
 	putchar(10);
