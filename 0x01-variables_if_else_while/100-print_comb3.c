@@ -17,18 +17,16 @@ int main(void)
 		{
 			if (k != f && k < f)
 			{
-			       putchar(f);
-		       	       putchar(k);
-			       if (k == 57 && f == 56)
-			       {
-				       break;
-			       }
-			       putchar(',');
-			       putchar(' ');
+				putchar(k);
+				putchar(f);
+				if (k == 57 && f == 56)
+					break;
+				putchar(',');
+				putchar(' ');
 			}
-			f++
+			f++;
 		}
-		k++
+		k++;
 	}
 	putchar(10);
 	return (0);
