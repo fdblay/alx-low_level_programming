@@ -20,7 +20,9 @@ int main(void)
 				putchar(k);
 				putchar(f);
 				if (k == 57 && f == 56)
+				{
 					break;
+				}
 				putchar(',');
 				putchar(' ');
 			}
