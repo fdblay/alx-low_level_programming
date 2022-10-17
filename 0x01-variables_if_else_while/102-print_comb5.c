@@ -26,12 +26,10 @@ int main(void)
 		putchar(' ');
 		putchar(r);
 		putchar(f);
-		/**
-		*if (d == 57 && e == 57 && r == 57 && f == 57)
-		*{
-		*break;
-		*}
-		*/
+		if (d == 57 && e == 57 && r == 57 && f == 57)
+		{
+		break;
+		}
 		putchar(',');
 		putchar(' ');
 		}
