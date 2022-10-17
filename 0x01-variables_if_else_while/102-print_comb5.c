@@ -9,16 +9,13 @@ int main(void)
 	int f, r, e, d, n, m;
 
 	f = r = e = d = 48;
-	for (d = 48; d < 58; d++)
+	for (d = 48; d < 58;)
 	{
-	}
-	for (e = 48; e < 58; e++)
+	for (e = 48; e < 58;)
 	{
-	}
-	for (r = 48; r < 58; r++)
+	for (r = 48; r < 58;)
 	{
-	}
-	for (f = 48; f < 58; f++)
+	for (f = 48; f < 58;)
 	{
 		n = (d + 10) + e;
 		m = (r + 10) + f;
@@ -36,6 +33,13 @@ int main(void)
 		putchar(',');
 		putchar(' ');
 		}
+		f++;
+	}
+	r++;
+	}
+	e++;
+	}
+	d++;
 	}
 	putchar(10);
 	return (0);
