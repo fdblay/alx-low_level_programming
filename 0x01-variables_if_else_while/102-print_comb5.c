@@ -8,38 +8,31 @@ int main(void)
 	int f, r, e, d, n, m;
 
 	f = r = e = d = 48;
-	while (d < 58)
+	for (d = 48; d < 58; d++)
 	{
-		e = 48;
-		while (e < 58)
-		{
-			r = 48;
-			while (r < 58)
-			{
-				f = 48;
-				while (f < 58)
-				{
-					n = (d + 10) + e;
-					m = (r + 10) + f;
-					if (n < m)
-					{
-						putchar(d);
-						putchar(e);
-						putchar(' ');
-						putchar(r);
-						putchar(f);
-						if (d == 57 && e == 56 && r == 57 && f == 57)
-							break;
-						putchar(',');
-						putchar(' ');
-					}
-					f++;
-				}
-				r++;
-			}
-			e++;
-		}
-		d++;
+	}
+	for (e = 48; e < 58; e++)
+	{
+	}
+	for (r = 48; r < 58; r++)
+	{
+	}
+	for (f = 48; f < 58; f++)
+	{
+		n = (d + 10) + e;
+		m = (r + 10) + f;
+	}
+	if (n < m)
+	{
+		putchar(d);
+		putchar(e);
+		putchar(' ');
+		putchar(r);
+		putchar(f);
+		if (d == 57 && e == 56 && r == 57 && f == 57)
+			break;
+		putchar(',');
+		putchar(' ');
 	}
 	putchar(10);
 	return (0);
