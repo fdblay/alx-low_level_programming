@@ -22,7 +22,7 @@ int main(void)
 					putchar(f);
 					putchar(a);
 					putchar(k);
-					if (f == 55 a == 56 && k == 57)
+					if (f == 55 && a == 56 && k == 57)
 						break;
 					putchar(',');
 					putchar(' ');
