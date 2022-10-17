@@ -9,22 +9,18 @@ int main(void)
 
 	f = 48;
 	k = 48;
-
-	while (f < 58)
+	for (f = 48; f <= 56; f++)
 	{
-		k = 48;
-		while (k < 58)
+		for (k = 48; k <= 57; k++)
 		{
-			if (k != f && k < f)
+			if (f != k && f < k)
 			{
-				putchar(k);
 				putchar(f);
+				putchar(k);
 				putchar(',');
 				putchar(' ');
 			}
-			f++;
 		}
-		k++;
 	}
 	putchar(10);
 	return (0);
