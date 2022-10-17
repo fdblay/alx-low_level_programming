@@ -22,9 +22,8 @@ int main(void)
 	{
 		n = (d + 10) + e;
 		m = (r + 10) + f;
-	}
-	if (n < m)
-	{
+		if (n < m)
+		{
 		putchar(d);
 		putchar(e);
 		putchar(' ');
@@ -32,10 +31,11 @@ int main(void)
 		putchar(f);
 		if (d == 57 && e == 56 && r == 57 && f == 57)
 		{
-		return;
+		break;
 		}
 		putchar(',');
 		putchar(' ');
+		}
 	}
 	putchar(10);
 	return (0);
