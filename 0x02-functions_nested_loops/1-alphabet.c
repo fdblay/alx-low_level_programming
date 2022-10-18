@@ -1,7 +1,6 @@
 #include "main.h"
 /**
 * print_alphabet - prints alphabets a-z
-* Return: Always 0
 */
 void print_alphabet(void)
 {
@@ -12,5 +11,4 @@ void print_alphabet(void)
 		_putchar(lc);
 	}
 	_putchar(10);
-	return (0);
 }
