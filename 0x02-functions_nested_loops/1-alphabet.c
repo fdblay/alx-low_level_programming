@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-* main - prints alphabets a-z
+* print_alphabet - prints alphabets a-z
 * Return: Always 0
 */
-int main(void)
+void print_alphabet(void)
 {
 	int lc;
 
