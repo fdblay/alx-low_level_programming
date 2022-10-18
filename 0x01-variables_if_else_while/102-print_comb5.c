@@ -6,40 +6,26 @@
  */
 int main(void)
 {
-	int f, r, e, d, n, m;
+	int  f, k;
 
-	f = r = e = d = 48;
-	for (d = 48; d < 58;)
+	for (f = 0; f < 100; f++)
 	{
-	for (e = 48; e < 58;)
-	{
-	for (r = 48; r < 58;)
-	{
-	for (f = 48; f < 58;)
-	{
-		n = (d + 10) + e;
-		m = (r + 10) + f;
-		if (n < m)
+		for (k = 0; k < 100; k++)
 		{
-		putchar(d);
-		putchar(e);
-		putchar(' ');
-		putchar(r);
-		putchar(f);
-		if (d == 57 && e == 57 && r == 57 && f == 57)
-		{
-		break;
+			if (f < k)
+			{
+				putchar((f / 10) + 48);
+				putchar((f % 10) + 48);
+				putchar(' ');
+				putchar((k / 10) + 48);
+				putchar((k % 10) + 48);
+				if (f != 98 || k != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
-		putchar(',');
-		putchar(' ');
-		}
-		f++;
-	}
-	r++;
-	}
-	e++;
-	}
-	d++;
 	}
 	putchar(10);
 	return (0);
