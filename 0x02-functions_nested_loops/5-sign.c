@@ -6,21 +6,5 @@
 */
 int print_sign(int n)
 {
-	int n;
-
-	n = 1;
-
-	if (n > 48)
-	{
-		_putchar(43);
-	}
-	else if (n == 48)
-	{
-		_putchar(48);
-	}
-	else if (n < 48)
-	{
-		_putchar(45);
-	}
-	return (1, 0, -1);
+	return ((n > 0) || (n == 0) || (n < 0));
 }
