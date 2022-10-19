@@ -6,8 +6,6 @@
 */
 int print_sign(int n)
 {
-	int n;
-
 	if (n > 48)
 	{
 		_putchar(43);
