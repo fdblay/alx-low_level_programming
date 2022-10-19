@@ -13,7 +13,7 @@ int print_sign(int n)
 	}
 	else if (n == 48)
 	{
-		_putchar(48);
+		_putchar('0');
 		return (0);
 	}
 	else
