@@ -10,11 +10,11 @@ int _isalpha(int c)
 	int _isupper;
 
 	_islower = c;
-	_isupper = b;
+	_isupper = c;
 
 	for (c = 99; c <= 122;)
 	{
-		for (b = 65; b <= 90;)
+		for (c = 65; c <= 90;)
 		{
 		}
 	}
