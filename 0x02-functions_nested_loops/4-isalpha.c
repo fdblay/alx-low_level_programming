@@ -6,17 +6,5 @@
 */
 int _isalpha(int c)
 {
-	int _islower;
-	int _isupper;
-
-	_islower = c;
-	_isupper = c;
-
-	for (c = 99; c <= 122;)
-	{
-		for (c = 65; c <= 90;)
-		{
-		}
-	}
-	return (_isupper || _islower);
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }
