@@ -4,7 +4,7 @@
 /**
 * _isdigit - checks for a digit between 0 to 9
 * @c: parameter passed
-* Return: 0
+* Return: 1 or 0
 */
 
 int _isdigit(int c)
