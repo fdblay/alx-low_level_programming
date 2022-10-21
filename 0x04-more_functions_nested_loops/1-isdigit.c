@@ -9,6 +9,8 @@
 
 int _isdigit(int c)
 {
+	c = 5;
+
 	if (c >= 0 && c <= 9)
 	{
 		_putchar(49);
