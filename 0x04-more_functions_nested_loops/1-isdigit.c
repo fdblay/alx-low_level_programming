@@ -12,10 +12,11 @@ int _isdigit(int c)
 	if (c >= 0 && c <= 9)
 	{
 		_putchar(49);
+	}
 
-		else
-			_putchar(48);
-
+	else
+	{
+		_putchar(48);
 	}
 	return (0);
 }
