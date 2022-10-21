@@ -9,16 +9,5 @@
 
 int _isdigit(int c)
 {
-	c = 5;
-
-	if (c >= 0 && c <= 9)
-	{
-		_putchar(49);
-	}
-
-	else
-	{
-		_putchar(48);
-	}
-	return (0);
+	return ((c >= 0 && c <= 9) || (c != 0 && c != 9));
 }
