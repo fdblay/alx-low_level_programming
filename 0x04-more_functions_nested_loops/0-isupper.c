@@ -1,10 +1,9 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
 * _isupper - checks for uppercase character
 * @c: formal parameter passed
-* Return:1 0r 0
+* Return: 0
 */
 
 int _isupper(int c)
@@ -13,10 +12,10 @@ int _isupper(int c)
 	{
 		_putchar(49);
 
-	}
-	else
-	{
+		else
+		{
 		_putchar(48);
+		}
 
 	}
 	return (0);
