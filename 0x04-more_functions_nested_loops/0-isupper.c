@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
@@ -9,5 +8,12 @@
 
 int _isupper(int c)
 {
-	return ((c >= 65 && c <= 90) || (c != 65 && c != 90));
+	if (c >= 65 && c <= 90)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
