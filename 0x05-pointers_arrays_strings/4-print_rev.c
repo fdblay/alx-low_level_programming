@@ -10,6 +10,7 @@ void print_rev(char *s)
 	if (*s != '\0')
 	{
 		print_rev(s + 1);
-		printf("%c\n", *s);
+		printf("%c", *s);
+		_putchar(10);
 	}
 }
