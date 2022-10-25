@@ -2,11 +2,12 @@
 
 /**
 * _puts - prints a string to stdout
-* @*str: parameter passed
+* @str: parameter passed
 * Return: void
 */
 void _puts(char *str)
 {
-	str = "Hello, ALX";
+	char *str = "Hello, ALX";
+
 	_puts(str);
 }
