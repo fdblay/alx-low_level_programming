@@ -3,12 +3,16 @@
 /**
 * _strlen - returns the length of a string
 * @s: parameter passed
-* Return: Always 0
+* Return: length
 */
 int _strlen(char *s)
 {
-	*s = "Hello!";
-	printf("%d", _strlen(s));
-	return (0);
+	int len = 0;
 
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
