@@ -3,11 +3,10 @@
 /**
 * _puts - prints a string to stdout
 * @str: parameter passed
-* Return: void
+* Return: 0
 */
 void _puts(char *str)
 {
-	char *str = "Hello, ALX";
-
 	_puts(str);
+	return (0);
 }
