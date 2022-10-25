@@ -3,10 +3,9 @@
 /**
 * _puts - prints a string to stdout
 * @str: parameter passed
-* Return: 0
+* Return: void
 */
 void _puts(char *str)
 {
 	_puts(str);
-	return (0);
 }
