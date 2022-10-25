@@ -6,7 +6,7 @@
 * @src: second parameter
 * Return: pointer to dest
 */
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src)
 {
 	_strcpy(*dest, *src);
 	_putchar(*dest);
