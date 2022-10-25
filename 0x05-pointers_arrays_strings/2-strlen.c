@@ -8,7 +8,7 @@
 int _strlen(char *s)
 {
 	s = "Hello!";
-	printf("%d", _strlen(s));
+	printf("%d", strlen(s));
 	return (0);
 
 }
