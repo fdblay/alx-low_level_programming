@@ -11,6 +11,6 @@ void print_rev(char *s)
 	{
 		print_rev(s + 1);
 		printf("%c", *s);
-		_putchar(10);
 	}
+	_putchar(10);
 }
