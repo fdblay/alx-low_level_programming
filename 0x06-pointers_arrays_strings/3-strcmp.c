@@ -4,14 +4,20 @@
 * _strcmp - compares two strings
 * @s1: first parameter
 * @s2: second parameter
-* Return: result;
+* Return: the difference in s1 and s2
 */
 int _strcmp(char *s1, char *s2)
 {
-	int result;
+	int k;
 
-	result = _strcmp(s1, s2);
-	result = _strcmp(s2, s1);
-	result = _strcmp(s1, s1);
-	return (result);
+	k = 0;
+	while (s1[k] != '\0' && s2[k] != '\0')
+	{
+		if (s1[k] != s2[k])
+		{
+			return (s1[k] - s2[k]);
+		}
+	k++;
+	}
+	return (0);
 }
