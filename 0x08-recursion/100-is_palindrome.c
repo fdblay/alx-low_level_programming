@@ -24,7 +24,7 @@ int is_palindrome(char *s)
 int reverse(int num)
 {
 	int rem;
-	static int sum;
+	int sum = 0;
 
 	if (num != 0)
 	{
