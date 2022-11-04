@@ -9,5 +9,5 @@
 */
 int main(int argc, char *argv[])
 {
-	_puts(argv[]);
+	_puts(argv[0]);
 }
