@@ -10,4 +10,5 @@
 int main(int argc, char *argv[])
 {
 	_puts(argv[0]);
+	return (0);
 }
