@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
 * main - multiplies two numbers
-* @argc: first int arg
-* @argv: second int arg
-* Return: 0 and 1
+* @argc: argument count
+* @argv: argument vector
+* Return: 0 if true, 1 if false
 */
 int main(int argc, char *argv[])
 {
@@ -18,9 +19,6 @@ int main(int argc, char *argv[])
 		printf("%d\n", n1 * n2);
 		return (0);
 	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+	printf("Error\n");
+	return (1);
 }
