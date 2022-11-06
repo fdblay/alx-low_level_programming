@@ -14,9 +14,9 @@ int main(int argc, char *argv[])
 
 	place = total = change = all = 0;
 
-	if (argc != 1) /*if no. or args passed isn't exactly 1*/
+	if (argc != 2) /*if no. or args passed isn't exactly 1*/
 	{
-		printf("Error\n"); /*print Error followed by a new line*/
+		puts("Error"); /*print Error followed by a new line*/
 		return (1);
 	}
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (total <= 0) /*check if number passed is negative*/
 	{
-		printf("0\n"); /*print zero and a new line*/
+		puts("0"); /*print zero and a new line*/
 		return (0);
 	}
 
