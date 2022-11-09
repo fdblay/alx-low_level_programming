@@ -19,6 +19,6 @@ char *_strdup(char *str)
 	{
 		return (duplicate);
 	}
-	free(str)
+	free(str);
 	return (0);
 }
