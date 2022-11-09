@@ -10,6 +10,6 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 void _putchar(char *c);
 char *argstostr(int ac, char **av);
-har **strtow(char *str);
+char **strtow(char *str);
 
 #endif /*MAIN_H*/
