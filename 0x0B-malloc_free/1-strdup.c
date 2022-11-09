@@ -4,21 +4,29 @@
 /**
  * _strdup - returns a pointer to a new memory space
  * @str: char pointer passed
- * Return: pointer or NULL
+ * Return: pointer to new copy or NULL if malloc fails
  */
 char *_strdup(char *str)
 {
 	char *duplicate;
+	unsigned int size = 0;
 
-	str = strdup(duplicate);
-	if (str == NULL)
+	if (str)
 	{
-		return (NULL);
+		while (str[size++])
+		{
+			;
+		}
+
+		duplicate = malloc(sizeof(char) * size);
+		if (duplicate)
+		{
+			while (size--)
+			{
+				duplicate[size] = str[size];
+			}
+			return (duplicate);
+		}
 	}
-	else
-	{
-		return (duplicate);
-	}
-	free(str);
-	return (0);
+	return (NULL);
 }
