@@ -2,13 +2,12 @@
 #include <stdlib.h>
 
 /**
- * *string_nconcat -> concatenates two strings
+ * string_nconcat -> concatenates two strings
  * @s1: points to destination string
  * @s2: points to source string
- * @n: the n size for concatenation
- * Return: pointer or NULL if function fails
+ * @n: index
+ * Return: char pointer or NULL if function fails
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1 = 0;
@@ -19,7 +18,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
-
 	if (s2 == NULL)
 	{
 		s2 = "";
@@ -28,19 +26,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		len1++;
 	}
-
 	while (s2[len2] != '\0')
 	{
 		len2++;
 	}
-
 	if (n > len2)
 		n = len2;
-
 	cat = malloc(sizeof(char) * (len1 + n + 1));
 	if (cat == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 	len = 0;
 	for (str = 0; str < len1; str++)
@@ -51,7 +46,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		cat[str] = s2[str - len1];
 	}
-
 	cat[str] = '\0';
 	return (cat);
 }
