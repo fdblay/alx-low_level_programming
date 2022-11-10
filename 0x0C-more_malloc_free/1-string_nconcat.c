@@ -1,13 +1,14 @@
 #inlcude "main.h"
-#include "stdlib.h>
+#include <stdlib.h>
 
 /**
-* *string_nconcat -> concatenates two strings
-* @s1: points to destination string
-* @s2: points to source string
-* @n: the n size for concatenation
-* Return: pointer or NULL if function fails
-*/
+ * *string_nconcat -> concatenates two strings
+ * @s1: points to destination string
+ * @s2: points to source string
+ * @n: the n size for concatenation
+ * Return: pointer or NULL if function fails
+ */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len = n;
@@ -18,6 +19,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 	}
+
 	if (s2 == NULL)
 	{
 		s2 = "";
