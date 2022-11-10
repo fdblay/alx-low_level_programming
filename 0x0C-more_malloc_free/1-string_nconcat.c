@@ -15,10 +15,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *cat;
 
 	if (s1 == NULL)
+	{
 		s1 = "";
+	}
 	if (s2 == NULL)
+	{
 		s2 = "";
-	while (s1[len2] != '\0')
+	}
+	while (s1[len2])
 	{
 		++len2
 		++n;
@@ -33,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		++len2;
 		++len1;
 	}
-	while (len2 <= n && s2[len2] != '\0')
+	while (len2 <= n && s2[len2])
 	{
 		cat[len1] = s2[len2];
 		++len2;
