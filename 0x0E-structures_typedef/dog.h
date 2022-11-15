@@ -1,5 +1,6 @@
-#ifndef 'dog_h'
-#define 'dog_h'
+#ifndef dog_h
+#define dog_h
+#include <stdio.h>
 
 /* dog.h */
 /**
