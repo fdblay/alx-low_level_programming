@@ -15,12 +15,16 @@ void print_dog(struct dog *d)
 	d = malloc(sizeof(struct dog));
 	
 	if (d == NULL)
-		return (NULL);
-	else if (d->name == NULL
-		 d->dog == NULL
-		 d->owner == NULL)
-		return (nil);
+		return;
+	if (d->name == NULL)
+		d->name = "(nil)";
+
+	if (d->age == NULL)
+		d->age = "(nil)";
+
+	if (d->owner == NULL)
+		d->owner = "(nil)";
 	printf("name: %s\nage: %f\nowner: %s", d->name, d->age, d->owner);
-	return (0);
+
 }
 
