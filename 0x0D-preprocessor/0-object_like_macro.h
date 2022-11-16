@@ -9,8 +9,7 @@
  */
 int main(void)
 {
-#define SIZE 1024
-	return (0);
+	#define SIZE 1024
 };
 
 #endif /* 0-object_like_macro.h */
