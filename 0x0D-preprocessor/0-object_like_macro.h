@@ -3,13 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - defines a macro named SIZE
- *
- * Return: Always 0
+ * SIZE - macro abbreviation for token 1024
  */
-int main(void)
-{
-	#define SIZE 1024
-};
+
+#define SIZE 1024
 
 #endif /* 0-object_like_macro.h */
