@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		puts("Error");
+		printf("Error\n");
 		exit(98);
 	}
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 	if (!func)
 	{
-		puts("Error");
+		printf("Error");
 		exit(98);
 	}
 
@@ -36,8 +36,8 @@ int main(int argc, char *argv[])
 
 	if ((o == '/' || o == '%') && num2 == 0)
 	{
-		puts("Error");
-		exit(98);
+		printf("Error");
+		exit(100);
 	}
 
 	calc = func(num1, num2);
