@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error\n");
+		puts("Error");
 		exit(98);
 	}
 
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 	if (!func)
 	{
-		printf("Error");
+		puts("Error");
 		exit(99);
 	}
 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
 	if ((o == '/' || o == '%') && num2 == 0)
 	{
-		printf("Error");
+		puts("Error");
 		exit(100);
 	}
 
