@@ -15,8 +15,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *str;
 
 
-	if (separator == NULL)
-		return;
 
 	va_start(arglist, n);
 
