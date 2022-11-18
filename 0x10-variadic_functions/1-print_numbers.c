@@ -25,7 +25,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%s%d", separator, va_arg(arglist, unsigned int));
 	}
 
-	va_end(arglis);
+	va_end(arglist);
 
 	printf("\n");
 }
