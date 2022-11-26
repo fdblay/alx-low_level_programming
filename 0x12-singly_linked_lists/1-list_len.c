@@ -11,11 +11,10 @@ size_t list_len(const list_t *h)
 {
 	int count = 0;
 
-	while (h != NULL)
+	while (h)
 	{
 		count++;
 		h = h->next;
-		//printf("-> %d elements\n", count);
 	}
 	return (count);
 }
