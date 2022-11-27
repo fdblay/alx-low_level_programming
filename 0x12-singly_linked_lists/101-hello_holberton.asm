@@ -1,8 +1,7 @@
 ;prints Hello, Holberton followed by a new line
 
-section .text
-	default rel
 	extern printf
+section .text
 	global main
 main:
 	push rbp
@@ -11,8 +10,7 @@ main:
 	mov rsi, msg
 	mov rax, 0
 
-	;call printf with relation to procedure linkage table
-	call printf wrt ..plt
+	call printf	;call printf 
 
 	pop rbp		; pop stack
 
@@ -20,5 +18,5 @@ main:
 	ret 		; Return
 
 section .data
-	msg: db	"Hello, Holberton", 0xa, 0
+	msg: db	"Hello, Holberton", 0
 	fmt: db "%s", 0xa, 0
