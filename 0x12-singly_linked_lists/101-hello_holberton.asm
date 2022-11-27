@@ -1,17 +1,24 @@
 ;prints Hello, Holberton followed by a new line
 
 section .text
-	global _start
-start:
-	mov edx, len
-	mov ecx, msg
-	mov ebx, 1
-	mov eax, 4
-	int 0x80
+	default rel
+	extern printf
+	global main
+main:
+	push rbp
 
-	mov eax, 1
-	int 0x80
+	mov rdi, fmt
+	mov rsi, msg
+	mov rax, 0
+
+	;call printf with relation to procedure linkage table
+	call printf wrt ..plt
+
+	pop rbp		; pop stack
+
+	mov rax,0	; Exit code 0
+	ret 		; Return
 
 section .data
-	msg db	"Hello, Holberton",0xa
-	len equ	$ -msg 
+	msg: db	"Hello, Holberton", 0xa, 0
+	fmt: db "%s", 0xa, 0
