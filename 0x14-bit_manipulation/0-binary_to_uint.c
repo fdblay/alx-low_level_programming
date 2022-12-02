@@ -9,15 +9,19 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int total = 0, dvalue = 1;
-	int slen = strlen(b);
+	int len;
 
 	if (b == NULL)
 		return (0);
-	for (int i = (slen - 1); i >= 0; i--)
+
+	for (len = 0; b[len];)
+		len++;
+
+	for (len -= 1; len >= 0; len--)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-		if (b[i] == '1')
+		if (b[len] == '1')
 			total += dvalue;
 		dvalue *= 2;	
 	}
