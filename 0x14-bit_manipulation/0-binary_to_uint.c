@@ -23,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		if (b[len] == '1')
 			total += dvalue;
-		dvalue *= 2;	
+		dvalue *= 2;
 	}
 	return (total);
 }
