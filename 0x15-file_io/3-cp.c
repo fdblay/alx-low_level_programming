@@ -12,18 +12,22 @@ int main(int argc, char *argv[])
 	char buf[1024];
 
 	if (argc != 3)
+	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
-
+	}
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]),
 			exit(98);
-
+	}
 	f_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (f_to == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]),
 			exit(99);
+	}
 	f_in = f_out = 1;
 	while (f_in)
 	{
