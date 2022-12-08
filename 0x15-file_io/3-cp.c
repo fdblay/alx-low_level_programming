@@ -8,47 +8,41 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd, f_to, f_in, f_out;
+	int file_from, file_to;
+	int num1 = 1024, num2 = 0;
 	char buf[1024];
 
 	if (argc != 3)
-	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-	}
-	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	f_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	if (f_to == -1)
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR
+			| S_IRGRP | S_IWGRP | S_IROTH);
+	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
-		exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		close(file_from), exit(99);
 	}
-	f_in = f_out = 1;
-	while (f_in)
+	while (num1 == 1024)
 	{
-		f_in = read(fd, buf, 1024);
-		if (f_in == -1)
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-		if (f_in > 0)
+		num1 = read(file_from, buf, 1024);
+		if (num1 == -1)
 		{
-			f_out = write(f_to, buf, f_in);
-			if (f_out == -1)
-				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
-					exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
 		}
+		num2 = write(file_to, buf, num1);
+		if (num2 < num1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
-	f_out = close(fd);
-	if (f_out == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd),
-			exit(100);
-	f_out = close(f_to);
-	if (f_out == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_to),
-			exit(100);
+	if (close(file_from) == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
+
+	if (close(file_to) == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 	return (0);
 }
