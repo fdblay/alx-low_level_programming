@@ -117,6 +117,7 @@ void print_version(unsigned char *e_ident)
 			break;
 		default:
 			printf("\n");
+			break;
 	}
 }
 
