@@ -45,8 +45,10 @@ void print_magic(unsigned char *e_ident)
 
 		if (ind == EI_NIDENT - 1)
 			printf("\n");
+
 		else
 			printf(" ");
+
 	}
 }
 
