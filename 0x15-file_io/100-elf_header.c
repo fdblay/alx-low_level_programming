@@ -15,10 +15,10 @@ void check_elf(unsigned char *e_ident)
 
 	for (ind = 0; ind < 4; ind++)
 	{
-		if (e_ident[ind] != 0x7f &&
-		    e_ident[ind] != 0x45 &&
-		    e_ident[ind] != 0x4c &&
-		    e_ident[ind] != 0x46)
+		if (e_ident[ind] != 127 &&
+		    e_ident[ind] != 'E' &&
+		    e_ident[ind] != 'L' &&
+		    e_ident[ind] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
@@ -42,10 +42,11 @@ void print_magic(unsigned char *e_ident)
 	for (ind = 0; ind < EI_NIDENT; ind++)
 	{
 		printf("%02x", e_ident[ind]);
-		if (ind != EI_NIDENT - 1)
-			printf(" ");
-		else
+
+		if (ind == EI_NIDENT - 1)
 			printf("\n");
+		else
+			printf(" ");
 	}
 }
 
@@ -221,6 +222,8 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
+	printf(" Entry point address:		  ");
+
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		e_entry = ((e_entry << 8) & 0xFF00FF00) |
