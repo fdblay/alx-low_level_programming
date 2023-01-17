@@ -4,4 +4,11 @@
 * @n: parameter
 * Return: Absolute value of a number
 */
-int _abs(int n);
+int _abs(int n)
+{
+	if (i < 0)
+	{
+		i = -i;
+	}
+	return (i);
+}
